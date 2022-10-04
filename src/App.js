@@ -66,15 +66,15 @@ function App() {
   return (
     <>
       {/* <Navbar title="OwnInfotech" about="About" home="Home" contact="Contact"/> */}
-      {/* <Router>  */}
+      <Router> 
       <Navbar title="OwnInfotech"  home="Home" registration="Home" mode={mode} toggleMode={toggleMode} 
       registrationForm="RegistrationForm"/>
       <Alert alert = {alert}/>
       {/* <div className = "container my-3"> */}
-      {/* <Switch>
-          <Route exact path="/"> */}
+      <Switch>
+          <Route exact path="/">
              <TextForm showAlert={showAlert} heading= "Enter text below"  mode={mode} />
-          {/* </Route>
+          </Route>
           <Route exact path="/about">
             <About/>
           </Route>
@@ -101,9 +101,9 @@ function App() {
           </Route>
           
          
-        </Switch> */}
+        </Switch>
       {/* </div> */}
-      {/* </Router> */}
+      </Router>
       
       </>
   );

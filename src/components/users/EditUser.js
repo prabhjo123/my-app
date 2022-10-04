@@ -5,7 +5,7 @@ import { useHistory , useParams} from 'react-router-dom';
 const EditUser = () => {
   let history = useHistory();
     const {id} = useParams();
-    alert(id);
+    //alert(id);
     const [user,setUser] = useState({
         Name: "",
         username: "",

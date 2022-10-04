@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
- //import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
@@ -14,24 +14,24 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link"  activeClassName="is-active" aria-current="page" href="#">{props.home}</a>
-            {/* <NavLink className="nav-link"  activeClassName="is-active" aria-current="page" to="/">{props.home}</NavLink> */}
+            {/* <a className="nav-link"  activeClassName="is-active" aria-current="page" href="#">{props.home}</a> */}
+            <NavLink className="nav-link"  activeClassName="is-active" aria-current="page" to="/">{props.home}</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link"  href='#'>{props.about}</a>
-            {/* <NavLink className="nav-link"  to='/about'>{props.about}</NavLink> */}
+            {/* <a className="nav-link"  href='#'>{props.about}</a> */}
+            <NavLink className="nav-link"  to='/about'>{props.about}</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link"  href='#'>Login</a>
-            {/* <NavLink className="nav-link"  to='/login'>Login</NavLink> */}
+            {/* <a className="nav-link"  href='#'>Login</a> */}
+            <NavLink className="nav-link"  to='/login'>Login</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">{props.registration}</a>
-            {/* <NavLink className="nav-link" to="/registration">{props.registration}</NavLink> */}
+            {/* <a className="nav-link" href="#">{props.registration}</a> */}
+            <NavLink className="nav-link" to="/registration">{props.registration}</NavLink>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">{props.registration}</a>
-            {/* <NavLink className="nav-link" to="/registrationForm">{props.registrationForm}</NavLink> */}
+            {/* <a className="nav-link" href="#">{props.registration}</a> */}
+            <NavLink className="nav-link" to="/registrationForm">{props.registrationForm}</NavLink>
           </li>
           {/* <li className="nav-item">
           <label htmlFor="exampleColorInput" className="nav-link">Color picker</label>
@@ -65,7 +65,7 @@ export default function Navbar(props) {
            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Toggle Mode</label>
         </div> */}
       </div>
-      {/* <NavLink className='btn btn-outline-primary' to="/AddUser">Add User</NavLink> */}
+      <NavLink className='btn btn-outline-primary' to="/AddUser">Add User</NavLink>
     </div>
   </nav>
   )

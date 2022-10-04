@@ -12,7 +12,7 @@ import Notfound from './components/Notfound';
 import AddUser from './components/users/AddUser';
 import View from './components/users/View';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Routes
@@ -66,15 +66,15 @@ function App() {
   return (
     <>
       {/* <Navbar title="OwnInfotech" about="About" home="Home" contact="Contact"/> */}
-      {/* <Router>  */}
+      <Router> 
       <Navbar title="OwnInfotech"  home="Home" registration="Home" mode={mode} toggleMode={toggleMode} 
       registrationForm="RegistrationForm"/>
       <Alert alert = {alert}/>
-      {/* <div className = "container my-3"> */}
-      {/* <Switch>
-          <Route exact path="/"> */}
+      <div className = "container my-3">
+      <Switch>
+          <Route exact path="/">
              <TextForm showAlert={showAlert} heading= "Enter text below"  mode={mode} />
-          {/* </Route>
+          </Route>
           <Route exact path="/about">
             <About/>
           </Route>
@@ -98,12 +98,10 @@ function App() {
           </Route>
           <Route>
               <Notfound/>
-          </Route> */}
-          
-         
-        {/* </Switch> */}
-      {/* </div> */}
-      {/* </Router> */}
+          </Route>
+        </Switch>
+      </div>
+      </Router>
       
       </>
   );
